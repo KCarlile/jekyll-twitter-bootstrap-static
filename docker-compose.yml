@@ -1,0 +1,18 @@
+# Dockerfile
+#
+# This docker-compose file contains the command to build a basic
+# Apache container.
+#
+# Author: Kenny Carlile (KCarlile.com)
+# Source: https://github.com/KCarlile/jekyll-twitter-bootstrap-static
+
+version: '3.9'
+services:
+    jekyll-twitter-bootstrap-static:
+        build: .
+        image: httpd:latest
+        volumes:
+            - ./:/var/www/html/
+        container_name: jekyll-twitter-bootstrap-static
+        ports:
+            - 80:80
